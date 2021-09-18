@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const JWT_privateKey = "joterahaiwomerahai$"
 
 module.exports = function userFetch(req, res, next) {
-    const token = req.header("authorization");
+    const token = req.header("Authorization");
     if (!token) {
         res.status(401).send({ error: "Please authenticate using a valid token" })
     }
